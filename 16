@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int m,n, brojac=0, obraten=0;
+    scanf("%d %d", &m, &n);
+    
+    for(int i=m;i<=n;i++)
+    {
+        obraten=0;
+        for(int j=i;j>0;j/=10)
+        {
+            obraten*=10;
+            obraten+=j%10;
+        }
+        if (obraten+i<=2*i)
+        {
+            printf("%d\n", i);
+            brojac++;
+        }
+        
+    }
+    printf("Vkupno: %d", brojac);
+    
+}
