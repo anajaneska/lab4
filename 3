@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+    int a,b, brojac=0, zbir=0;
+    scanf("%d %d", &a, &b);
+    
+    for(int i=a; i<=b;i++)
+    {
+        zbir=0;
+        for(int j = i; j > 0; j /= 10)
+        {
+            if((j % 10) % 2 == 0)
+            {
+                zbir += j % 10;
+            }
+        }
+        
+        
+        if(zbir>0 && zbir%4==0)
+    {
+        printf("%d\n", i);
+        brojac++;
+    }
+    }
+    
+    
+    printf("Vkupno: %d", brojac);
+}
