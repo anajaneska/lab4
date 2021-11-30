@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int A,P, zbir=0, ima=0,brB=0;
+    scanf("%d %d", &A, &P);
+    
+    for(int i=A; i>0; i--)
+    {
+        zbir=0;
+        for(int j=i; j>0;j/=10)
+        {
+            zbir=zbir+j%10;
+        }
+        if(brB<5 && zbir/(float)i*100 == P)
+        {
+            brB++;
+            printf("%d\n", i);
+            ima=1;
+        }
+    }
+    
+    if(ima==0)
+    {
+        printf("NEMA");
+    }
+}
